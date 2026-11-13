@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+    <style>
+        *{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-color:#e8eef3
+        }
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 14px;
+            padding-bottom: 15px;
+        }
+        nav {
+            background-color: #333;
+            padding: 12px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+        nav a:hover {
+            color: #77aaff;
+        }      
+        .main{
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 65%;
+            text-align: left;
+            display: inline-block;
+        }
+        .caixa{
+            background-color: #edebf3;
+            border-radius: 7px;
+            padding: 1px;
+            padding-left: 15px;
+        }
+        .destaque{
+            color: #0079db;
+            font-weight: bold;
+        }
+        .botao{
+            background-color: #0079db;
+            border: 1px solid #0079db;
+            color: #ffffff;
+            padding: 5px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form{
+            border: 2px solid #a8a8a8;
+            padding: 6px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 2px;
+            width: 98%;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+    </style>
+    <script src="JavaScript/script.js" defer></script>
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Fundação de Ensino de Contagem</h1>
+        <p>Curso de Frontend</p>
+
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <br>
+    <div class="main">
+        <h2>Manipulação do DOM</h2>
+        <p>Este é um parágrafo que será utilizado nos exercícios.</p>
+        <p class="destaque">Este é um texto com a classe destaque.</p>
+        <div class="caixa">
+            <h3>Caixa 1</h3>
+            <p>Conteúdo da 1ª caixa</p>
+        </div>
+        <br>
+        <div class="caixa">
+            <h3>Caixa 2</h3>
+            <p>Conteúdo da 2ª caixa</p>
+        </div>
+        <br>
+        <div class="caixa">
+            <h3>Caixa 3</h3>
+            <p>Conteúdo da 3ª caixa</p>
+        </div>
+        <br>
+        <input type="button" value="Botão principal" class="botao" id="botaoPrincipal"/>
+        <input type="button" value="Botão secundário" class="botao" id="botaoSecundario"/>
+    </div>
+    <br><br>
+    <div class="main">
+        <h2>Lista de tecnologias</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>PHP</li>
+            <li>Rust</li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="main">
+        <h2>Imagem</h2>
+        <img src="images/landscape.jpg"/>
+    </div>
+    <br><br>
+    <div class="main">
+        <h2>Formulário</h2>
+        <h4>Nome</h4>
+        <input type="text" placeholder="Digite seu nome" class="form"/>
+        <h4>E-mail</h4>
+        <input type="text" placeholder="Digite seu e-mail" class="form"/>
+        <h4>Curso</h4>
+        <select class="form">
+            <option value="">Selecione</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <h4>Comentário</h4>
+        <textarea name="Comentário" id="Comentário" cols="80" rows="7"></textarea>
+        <br><br>
+        <button class="botao" type="submit">Enviar</button>
+    </div>
+    <br><br>
+    <div class="main">
+        <h2>Tabela de alunos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana</td>
+                    <td>20</td>
+                    <td>JavaScript</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>22</td>
+                    <td>HTML e CSS</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>19</td>
+                    <td>JavaScript</td>                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <footer>
+        <p>Curso de Frontend - Manipulação do DOM</p>
+    </footer>
+    </center>
+</body>
+</html>
